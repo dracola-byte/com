@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Love Story | Couple Magazine</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --pink: #e7a9ad;
+  --dark-pink: #a95c69;
+  --cream: #fff9f6;
+  --ink: #34252a;
+  --muted: #87767b;
+  --line: #ead8d9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1100px, calc(100% - 48px));
+  margin: auto;
+}
+
+/* Header */
+
+header {
+  background: #fffdfb;
+  border-bottom: 1px solid var(--line);
+}
+
+.topline {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line);
+  text-align: center;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.masthead {
+  text-align: center;
+  padding: 15px 0 13px;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 39px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: var(--dark-pink);
+  font-style: italic;
+}
+
+.subtitle {
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 3px;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+nav {
+  border-top: 1px solid var(--line);
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 10px 0;
+}
+
+.nav-inner a {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color .25s;
+}
+
+.nav-inner a:hover {
+  color: var(--dark-pink);
+}
+
+/* Intro */
+
+.intro {
+  text-align: center;
+  padding: 24px 0 18px;
+}
+
+.eyebrow {
+  color: var(--dark-pink);
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+.intro h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  font-weight: 500;
+  margin: 8px 0;
+}
+
+.intro p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* Hero */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.08fr .92fr;
+  min-height: 340px;
+  background: #f5e6e5;
+  overflow: hidden;
+}
+
+.hero-photo {
+  height: 340px;
+  overflow: hidden;
+}
+
+.hero-photo img {
+  transition: transform .6s ease;
+}
+
+.hero:hover .hero-photo img {
+  transform: scale(1.035);
+}
+
+.hero-copy {
+  padding: 34px 34px 28px;
+  align-self: center;
+}
+
+.label {
+  display: inline-block;
+  color: var(--dark-pink);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.hero-copy h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 31px;
+  line-height: 1.3;
+  font-weight: 500;
+  margin-bottom: 13px;
+}
+
+.hero-copy p {
+  color: #75656a;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.names {
+  font-family: 'Playfair Display', serif;
+  color: var(--dark-pink);
+  font-size: 17px;
+  font-style: italic;
+  margin-top: 15px;
+}
+
+.date {
+  margin-top: 7px;
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 1px;
+}
+
+/* Section heading */
+
+.section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 0 15px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-head h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.section-head span {
+  color: var(--dark-pink);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Couple stories */
+
+.stories {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.story {
+  display: grid;
+  grid-template-columns: 42% 58%;
+  min-height: 170px;
+  background: #fffdfb;
+  border: 1px solid var(--line);
+  overflow: hidden;
+  transition: transform .3s, box-shadow .3s;
+}
+
+.story:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px #895c6515;
+}
+
+.story-photo {
+  height: 100%;
+  min-height: 170px;
+  overflow: hidden;
+}
+
+.story-photo img {
+  transition: transform .5s;
+}
+
+.story:hover .story-photo img {
+  transform: scale(1.06);
+}
+
+.story-copy {
+  padding: 16px 15px;
+  align-self: center;
+}
+
+.story-copy .label {
+  margin-bottom: 7px;
+  font-size: 9px;
+}
+
+.story-copy h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  line-height: 1.4;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.story-copy p {
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.story-copy small {
+  display: block;
+  color: var(--dark-pink);
+  font-size: 9px;
+  margin-top: 9px;
+  letter-spacing: .5px;
+}
+
+/* Love letter */
+
+.love-letter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 25px;
+  background: #f3e1df;
+  padding: 22px;
+  margin-top: 30px;
+}
+
+.letter-photo {
+  height: 230px;
+  overflow: hidden;
+}
+
+.letter-copy {
+  padding: 8px 15px;
+}
+
+.letter-copy h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 27px;
+  line-height: 1.35;
+  font-weight: 500;
+  margin: 8px 0 12px;
+}
+
+.letter-copy p {
+  color: #75656a;
+  font-size: 11px;
+  line-height: 2;
+}
+
+.signature {
+  font-family: 'Playfair Display', serif;
+  color: var(--dark-pink);
+  font-style: italic;
+  font-size: 19px;
+  margin-top: 12px;
+}
+
+/* Quote */
+
+.quote {
+  text-align: center;
+  padding: 32px 50px;
+  margin: 25px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.quote-mark {
+  color: var(--dark-pink);
+  font-family: Georgia, serif;
+  font-size: 36px;
+  line-height: 1;
+}
+
+.quote p {
+  max-width: 650px;
+  margin: 5px auto 10px;
+  font-family: 'Playfair Display', serif;
+  font-size: 21px;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.quote small {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+/* Footer */
+
+footer {
+  background: #39282e;
+  color: #fff4f1;
+  padding: 22px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+}
+
+.footer-inner p {
+  color: #d5bdc1;
+  font-size: 10px;
+  margin-top: 4px;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+/* Reveal animation */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fit smaller desktop and laptop screens */
+
+@media (max-width: 1150px) {
+  .container {
+    width: calc(100% - 36px);
+  }
+
+  .hero-copy {
+    padding: 24px;
+  }
+
+  .hero-copy h2 {
+    font-size: 27px;
+  }
+
+  .story-copy {
+    padding: 12px;
+  }
+
+  .story-copy h3 {
+    font-size: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+/* Love letter envelope interaction */
+
+.love-letter {
+overflow: hidden;
+}
+
+.letter-stage {
+position: relative;
+min-height: 290px;
+display: flex;
+align-items: center;
+justify-content: center;
+perspective: 1200px;
+overflow: hidden;
+padding: 12px;
+}
+
+/* Envelope */
+
+.envelope {
+position: relative;
+width: 220px;
+height: 145px;
+border: none;
+background: transparent;
+cursor: pointer;
+perspective: 900px;
+transition:
+opacity .4s ease,
+transform .5s ease;
+flex-shrink: 0;
+z-index: 2;
+}
+
+.envelope-back {
+position: absolute;
+inset: 0;
+background: #e8b8bd;
+border-radius: 4px;
+box-shadow: 0 12px 28px #895c6525;
+}
+
+.envelope-paper {
+position: absolute;
+left: 14px;
+right: 14px;
+top: 8px;
+height: 115px;
+background: #fffdf8;
+border: 1px solid #f0d9d7;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 7px;
+color: #a95c69;
+font-family: 'Playfair Display', serif;
+font-size: 15px;
+transition: transform .7s ease;
+}
+
+.paper-heart {
+font-size: 24px;
+}
+
+.envelope-front {
+position: absolute;
+inset: 0;
+background: #e7a9ad;
+clip-path: polygon(0 0, 50% 58%, 100% 0, 100% 100%, 0 100%);
+border-radius: 4px;
+}
+
+.envelope-flap {
+position: absolute;
+inset: 0;
+background: #d88f99;
+clip-path: polygon(0 0, 100% 0, 50% 58%);
+transform-origin: top center;
+transition: transform .55s ease;
+z-index: 3;
+}
+
+.envelope-seal {
+position: absolute;
+top: 53px;
+left: 50%;
+transform: translateX(-50%);
+width: 30px;
+height: 30px;
+display: grid;
+place-items: center;
+border-radius: 50%;
+background: #a95c69;
+color: white;
+font-size: 19px;
+z-index: 4;
+box-shadow: 0 3px 8px #895c6530;
+}
+
+.envelope-hint {
+position: absolute;
+top: 165px;
+left: 0;
+width: 100%;
+text-align: center;
+color: #a95c69;
+font-family: 'Poppins', sans-serif;
+font-size: 9px;
+letter-spacing: 2px;
+white-space: nowrap;
+}
+
+.envelope:hover {
+transform: translateY(-5px);
+}
+
+.envelope:hover .envelope-paper {
+transform: translateY(-7px);
+}
+
+/* Opening animation */
+
+.letter-stage.open .envelope {
+animation: envelopeDisappear .55s ease forwards;
+pointer-events: none;
+}
+
+.letter-stage.open .envelope-flap {
+transform: rotateX(180deg);
+}
+
+@keyframes envelopeDisappear {
+0% {
+opacity: 1;
+transform: scale(1);
+}
+
+45% {
+opacity: .8;
+transform: scale(.9) translateY(-12px);
+}
+
+100% {
+opacity: 0;
+transform: scale(.65) translateY(20px);
+visibility: hidden;
+}
+}
+
+/* Letter */
+
+.letter-paper {
+position: absolute;
+width: min(100%, 390px);
+max-height: 100%;
+overflow-y: auto;
+padding: 28px 25px 24px;
+background: #fffdf8;
+border: 1px solid #ead8d9;
+box-shadow: 0 12px 35px #895c6520;
+opacity: 0;
+visibility: hidden;
+transform: translateY(75px) scale(.86);
+transition:
+opacity .65s ease,
+transform .75s cubic-bezier(.2,.8,.2,1),
+visibility .65s;
+z-index: 5;
+}
+
+.letter-paper::before {
+content: "";
+position: absolute;
+inset: 7px ;
+bottom: -300px;
+border: 1px solid #f0e1df;
+pointer-events: none;
+}
+
+.letter-content {
+position: relative;
+z-index: 1;
+}
+
+.letter-content h2 {
+font-family: 'Playfair Display', serif;
+font-size: 27px;
+line-height: 1.3;
+font-weight: 500;
+margin: 10px 0 13px;
+}
+
+.letter-content p {
+color: #75656a;
+font-family: 'Poppins', sans-serif;
+font-size: 11px;
+line-height: 2;
+}
+
+.letter-content .signature {
+font-family: 'Playfair Display', serif;
+color: #a95c69;
+font-style: italic;
+font-size: 19px;
+margin-top: 14px;
+}
+
+/* Close button */
+
+.close-letter {
+position: absolute;
+top: 9px;
+right: 10px;
+width: 28px;
+height: 28px;
+display: grid;
+place-items: center;
+border: 1px solid #ead8d9;
+border-radius: 50%;
+background: #fff9f6;
+color: #a95c69;
+font-family: Arial, sans-serif;
+font-size: 22px;
+line-height: 1;
+cursor: pointer;
+z-index: 7;
+transition:
+background .25s,
+color .25s,
+transform .25s;
+}
+
+.close-letter:hover {
+background: #a95c69;
+color: white;
+transform: rotate(90deg);
+}
+
+/* Open state */
+
+.letter-stage.open .letter-paper {
+opacity: 1;
+visibility: visible;
+transform: translateY(0) scale(1);
+transition-delay: .3s;
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 650px) {
+.love-letter {
+grid-template-columns: 1fr;
+gap: 18px;
+padding: 14px;
+}
+
+.letter-photo {
+height: 210px;
+}
+
+.letter-stage {
+min-height: 310px;
+padding: 12px 5px;
+}
+
+.letter-paper {
+width: calc(100% - 10px);
+padding: 30px 20px 22px;
+}
+
+.letter-content h2 {
+font-size: 24px;
+}
+}
+
+@media (prefers-reduced-motion: reduce) {
+.envelope,
+.envelope *,
+.letter-paper,
+.close-letter {
+animation: none !important;
+transition-duration: .01ms !important;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="topline">AN ODYSSEY OF US </div>
+
+  <div class="container masthead">
+    <div class="logo">A <span>Thousand</span> Tomorrows</div>
+    <div class="subtitle">A Serenade for Two Souls</div>
+  </div>
+
+  
+</header>
+
+<main class="container" id="home">
+
+  <section class="intro reveal">
+    <div class="eyebrow">The Love Anthology</div>
+    <h1>Two Universes, One Convergence</h1>
+    <p>Among a Million Stories, I Choose Ours</p>
+  </section>
+
+  <section class="hero reveal">
+    <div class="hero-photo">
+     <img src="couple.jpg" alt="Our Love Story">
+    </div>
+
+    <div class="hero-copy">
+      <span class="label">You, Me & The Sun's Final Embrace</span>
+
+      <h2>It Was Always You</h2>
+
+      <p>
+        Somewhere between our first hello and our longest conversations,
+        you became my favorite person. What started as a simple meeting
+        slowly became a beautiful story filled with laughter, little
+        adventures, unforgettable memories, and a love that feels like home.
+      </p>
+
+      <div class="names">Badhon &amp; Nezam ‎</div>
+      <div class="date"> </div>
+    </div>
+  </section>
+
+  <section id="stories">
+    <div class="section-head reveal">
+      <h2>Our Little Chapters</h2>
+      <span>Moments We Keep</span>
+    </div>
+
+    <div class="stories">
+
+      <article class="story reveal">
+        <div class="story-photo">
+      <img src="first-meet.jpg" alt="Our First Meeting">
+        </div>
+
+        <div class="story-copy">
+          <span class="label">The Genesis of love</span>
+          <h3>The Day We First Met</h3>
+          <p>
+            One ordinary day became extraordinary when our paths crossed.
+            Little did we know that day would mean so much.
+          </p>
+          <small>🎀</small>
+        </div>
+      </article>
+
+      <article class="story reveal">
+        <div class="story-photo">
+        <img src="flowers.jpg" alt="Our Memories">
+        </div>
+
+        <div class="story-copy">
+          <span class="label">little moments, endless meaning</span>
+          <h3>Little Things, Big Love</h3>
+          <p>
+            The random messages, silly jokes, warm hugs, and quiet moments
+            became our favorite kind of happiness.
+          </p>
+          <small>THE QUIET ART OF LOVING</small>
+        </div>
+      </article>
+
+      <article class="story reveal" id="memories">
+        <div class="story-photo">
+          <img src="adventure.jpg" alt="OUR ADVENTURES">
+        </div>
+
+        <div class="story-copy">
+          <span class="label">beautifully lost</span>
+          <h3>Adventures With You</h3>
+          <p>
+            Every new place feels a little more special when I get to
+            discover it with you by my side.
+          </p>
+          <small>WHERE GAZES BECOME POETRY</small>
+        </div>
+      </article>
+
+      <article class="story reveal">
+        <div class="story-photo">
+          <img src="memories.jpg" alt="Our Memories">
+        </div>
+
+        <div class="story-copy">
+          <span class="label">An Everlasting Vow</span>
+          <h3>Choosing You, Every Day</h3>
+          <p>
+            Love is not only a grand promise. It is choosing each other
+            through all the ordinary days of life.
+          </p>
+          <small>STILL YOU, ALWAYS</small>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+<section class="love-letter reveal" id="letter">  <!-- Existing photo: unchanged -->  <div class="letter-photo">
+    <img src="love.jpg" alt="Our Love">
+  </div>  <!-- Letter interaction area -->  <div class="letter-stage"><!-- Closed envelope -->
+<button class="envelope" id="openEnvelope"
+        aria-label="Open your love letter">
+
+  <div class="envelope-back"></div>
+
+  <div class="envelope-paper">
+    <span>A little letter</span>
+    <span class="paper-heart">♡</span>
+  </div>
+
+  <div class="envelope-front"></div>
+  <div class="envelope-flap"></div>
+
+  <div class="envelope-seal">♡</div>
+
+  <span class="envelope-hint">OPEN ☝️ ♡</span>
+</button>
+
+<!-- Letter that appears after clicking -->
+<article class="letter-paper" id="loveLetter" aria-hidden="true">
+
+  <button class="close-letter" id="closeLetter"
+          aria-label="Close letter">×</button>
+
+  <div class="letter-content">
+
+    <span class="label">From My Soul to Yours</span>
+
+    <h2>Dear</h2>
+
+    <p>
+      If I could give you one thing in life, I would give you the ability
+      to see yourself through my eyes. Only then would you understand
+      how special you are to me. You make ordinary days feel beautiful,
+      and every tomorrow feels brighter because you are in my life.
+      No matter where life takes us, I hope we keep finding our way
+      back to each other.
+      I've always wanted someone I could keep falling in love with until my very last breath not just to experience love, but to marry, build a life together, and grow old beside. I don't know how long you'll hold my hand or where this uncertain road will lead us. Whether you want to be like the ninetynine out of a hundred who don't make it, or the one who does that, ultimately, is in your hands. I know loving me won't always be easy, but I've never dreamed of a perfect love, I've dreamed of a lasting one. I hope we keep choosing each other, through every season, until forever.
+    </p>
+
+    <div class="signature">With all my love ♡</div>
+
+  </div>
+
+</article>
+
+  </div></section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div>
+      <div class="footer-logo">Not the End, Just a Page Turned by Time </div>
+      <p>A little thing about a love that means everything.♡ </p>
+    </div>
+
+    <div class="footer-right">
+      <p> WITH LOVE ❤️ </p>
+      <p>© FOR MY LITTLE PANDA 🐼 </p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const revealElements = document.querySelectorAll('.reveal');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    } else {
+      entry.target.classList.remove('visible');
+    }
+  });
+}, {
+  threshold: 0.12
+});
+
+revealElements.forEach((element) => {
+  observer.observe(element);
+});
+
+const letterStage = document.querySelector('.letter-stage');
+const openEnvelope = document.getElementById('openEnvelope');
+const closeLetter = document.getElementById('closeLetter');
+const loveLetter = document.getElementById('loveLetter');
+
+openEnvelope.addEventListener('click', () => {
+letterStage.classList.add('open');
+loveLetter.setAttribute('aria-hidden', 'false');
+openEnvelope.setAttribute('aria-expanded', 'true');
+});
+
+closeLetter.addEventListener('click', () => {
+letterStage.classList.remove('open');
+loveLetter.setAttribute('aria-hidden', 'true');
+openEnvelope.setAttribute('aria-expanded', 'false');
+});
+
+</script>
+
+</body>
+</html>
